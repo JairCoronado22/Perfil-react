@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Portafolio de Jair Andre Coronado Melgarejo, desarrollador frontend junior especializado en React, TypeScript e interfaces web responsivas." />
+    <meta name="author" content="Jair Andre Coronado Melgarejo" />
+    <meta name="theme-color" content="#0f172a" />
+    <script>
+      (() => {
+        const saved = localStorage.getItem('jair-portfolio-theme');
+        const dark = saved ? saved === 'dark' : matchMedia('(prefers-color-scheme: dark)').matches;
+        document.documentElement.classList.toggle('dark', dark);
+      })();
+    </script>
+    <meta property="og:title" content="Jair Coronado | Frontend Developer" />
+    <meta property="og:description" content="Portafolio frontend junior: React, TypeScript, diseño responsivo e integración con APIs." />
+    <meta property="og:type" content="website" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet" />
+    <title>Jair Coronado | Frontend Developer</title>
+  </head>
+  <body>
+    <div id="root"></div>
+
+    <!-- Se detecta el formulario estático durante el build. -->
+    <form name="contacto-portafolio" data-netlify="true" netlify-honeypot="bot-field" hidden>
+      <input type="hidden" name="form-name" value="contacto-portafolio" />
+      <input name="bot-field" />
+      <input name="nombre" />
+      <input name="correo" type="email" />
+      <input name="asunto" />
+      <textarea name="mensaje"></textarea>
+    </form>
+
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
